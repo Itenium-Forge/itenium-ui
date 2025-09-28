@@ -8,6 +8,9 @@
     },
     {
       "path": "./apps/itenium-ui"
+    },
+    {
+      "path": "./libs/ui"
     }
   ]
 }

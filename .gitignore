@@ -49,3 +49,6 @@ out
 
 test-output
 error.log
+
+vite.config.*.timestamp*
+vitest.config.*.timestamp*
