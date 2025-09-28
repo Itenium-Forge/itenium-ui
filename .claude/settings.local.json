@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx nx build:*)",
+      "Bash(npx nx run-many:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
