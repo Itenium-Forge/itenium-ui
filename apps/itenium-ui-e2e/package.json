@@ -1,0 +1,10 @@
+{
+  "name": "@itenium/itenium-ui-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@itenium/itenium-ui"
+    ]
+  }
+}
