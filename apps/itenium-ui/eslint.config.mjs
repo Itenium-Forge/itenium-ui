@@ -10,7 +10,7 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
 });
 
-export default [
+const eslintConfig = [
   ...fixupConfigRules(compat.extends('next')),
   ...fixupConfigRules(compat.extends('next/core-web-vitals')),
   ...baseConfig,
@@ -19,3 +19,5 @@ export default [
     ignores: ['.next/**/*'],
   },
 ];
+
+export default eslintConfig;
