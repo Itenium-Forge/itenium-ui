@@ -16,6 +16,15 @@ export default defineConfig(() => ({
     }),
     tailwindcss(),
   ],
+  test: {
+    passWithNoTests: true,
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './test-setup.ts',
+    coverage: {
+      reportsDirectory: '../../coverage/libs/ui',
+    },
+  },
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
