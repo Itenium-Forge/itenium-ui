@@ -8,10 +8,43 @@ const { composePlugins, withNx } = require('@nx/next');
 const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
-  nx: {},
+  nx: {
+    svgr: false,
+  },
   transpilePackages: ['@itenium/ui'],
   experimental: {
     externalDir: true,
+  },
+  webpack(config) {
+    // Manual SVGR configuration to replace the deprecated Nx SVGR
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            prettier: false,
+            svgo: false,
+            svgoConfig: {
+              plugins: [{ removeViewBox: false }],
+            },
+            titleProp: true,
+            ref: true,
+          },
+        },
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'static/media/[name].[hash].[ext]',
+          },
+        },
+      ],
+      issuer: {
+        and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+      },
+    });
+
+    return config;
   },
 };
 
