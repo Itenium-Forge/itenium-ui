@@ -11,6 +11,12 @@
     },
     {
       "path": "./libs/ui"
+    },
+    {
+      "path": "./apps/file-management-e2e"
+    },
+    {
+      "path": "./apps/file-management"
     }
   ]
 }
