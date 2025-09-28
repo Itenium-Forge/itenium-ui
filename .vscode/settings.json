@@ -1,3 +1,14 @@
 {
-    "nxConsole.generateAiAgentRules": true
+    "nxConsole.generateAiAgentRules": true,
+    "tailwindCSS.includeLanguages": {
+        "typescript": "typescript",
+        "typescriptreact": "typescriptreact"
+    },
+    "tailwindCSS.experimental.configFile": {
+        "apps/itenium-ui/src/**/*": "apps/itenium-ui/tailwind.config.js",
+        "libs/ui/src/**/*": "libs/ui/tailwind.config.js"
+    },
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false
 }
