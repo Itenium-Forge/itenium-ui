@@ -1,8 +1,12 @@
+// import { Button } from './button';
+
 export function IteniumUi() {
   return (
-    <div>
-      <h1>Welcome to IteniumUi!</h1>
-    </div>
+    <>
+      Welcome to IteniumUi!
+      <br />
+      {/* <Button className="w-full">Get Started</Button> */}
+    </>
   );
 }
 
